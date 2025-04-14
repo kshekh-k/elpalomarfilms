@@ -19,8 +19,8 @@
   ];
 </script>
 
-<footer class="flex flex-col md:grid grid-cols-12 gap-8 px-24 pt-10">
-  <div class="">
+<footer class="flex flex-col md:grid grid-cols-12 gap-8 px-3 2xl:px-24 pt-10">
+  <div class="max-w-40">
     <img src="/images/Logo-El-Palomar-FIilms.svg" alt="El Palomar FIilms" />
   </div>
   <div class="col-span-full grid gap-8 sm:col-span-5 sm:col-start-3">
@@ -128,7 +128,7 @@
     </form>
   </div>
   <div
-    class="col-span-4 mt-[--footer-pad] flex gap-10 text-xs sm:col-start-5 sm:gap-8 uppercase"
+    class="col-span-4 flex gap-4 flex-wrap text-xs sm:col-start-5 sm:gap-8 uppercase"
   >
     <a
       href="/"

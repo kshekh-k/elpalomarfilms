@@ -22,7 +22,7 @@
       title: "Axe — Long Lasting",
       descrip: "Andreas Nilsson",
     },
-    
+
     {
       videowebm: "/videos/13050886_1080_1920_30fps.webm",
       title: "Expedia — Nothing (DC)",
@@ -74,19 +74,29 @@
 <div aria-controls="scroller" aria-hidden="true" class="block">
   {#if mounted}
     <swiper-container
-      slides-per-view={3}
+      slides-per-view={1}
       space-between={spaceBetween}
       loop={true}
       centeredSlides={true}
       autoplay={false}
       pagination={false}
+      breakpoints={{
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 10,
+        },
+      }}
       on:swiperprogress={onProgress}
       on:swiperslidechange={onSlideChange}
     >
       {#each videos as item, i (i)}
         <swiper-slide>
           <div
-            class="flex justify-center items-stretch gap-2 active:cursor-grabbing flex-1 w-[calc(100vw-20rem)] max-w-full h-140 flex-col p-5"
+            class="flex justify-center items-stretch gap-2 active:cursor-grabbing flex-1 w-f 2xl:w-[calc(100vw-20rem)] max-w-full h-140 flex-col 2xl:p-5"
           >
             <div
               class="flex items-center justify-center flex-1 overflow-hidden rounded-lg shadow-lg"

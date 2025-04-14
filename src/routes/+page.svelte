@@ -4,7 +4,7 @@
   import Slider from "../component/slider.svelte";
 </script>
 
-<main class="py-2">
+<main class="py-2 px-3">
   <div class="min-h-screen">
     <Header />
     <div class="overflow-hidden w-full">

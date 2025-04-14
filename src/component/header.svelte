@@ -3,34 +3,49 @@
     {
       name: "Canada",
       url: "/",
+      isActive: true,
     },
     {
       name: "Archive",
-      url: "/",
+      url: "/archive",
+      isActive: false,
     },
     {
       name: "Contact",
-      url: "/",
+      url: "/contact",
+      isActive: false,
     },
     {
       name: "About",
-      url: "/",
+      url: "/about",
+      isActive: false,
     },
     {
       name: "Goods",
-      url: "/",
+      url: "/goods",
+      isActive: false,
     },
   ];
+
+  menu.forEach(item => {
+    if (window.location.pathname === item.url) {
+      item.isActive = true;
+    } else {
+      item.isActive = false;
+    }
+  });
 </script>
 
-<header class="grid grid-cols-12 gap-8 px-24">
+<header class="grid grid-cols-12 gap-8 px-3 2xlpx-24">
   <div class="col-start-5">
     <nav class="text-menu text-grey">
       <div class="col-span-4 col-start-5 uppercase flex flex-col gap-1">
         {#each menu as item}
           <a
-            href="/"
-            class="pointer-events-auto relative flex gap-1 w-fit items-center text-sm font-medium text-gray-400 ease-in-out duration-300 hover:text-gray-900 before:opacity-0 after:opacity-0 hover:before:opacity-100 hover:after:opacity-100 before:ease-in-out before:duration-300 after:ease-in-out after:duration-300 before:content-['['] after:content-[']']"
+            href={item.url}
+            class="pointer-events-auto relative flex gap-1 w-fit items-center text-sm font-medium ease-in-out duration-300 hover:before:opacity-100 hover:after:opacity-100 before:ease-in-out before:duration-300 after:ease-in-out after:duration-300 before:content-['['] after:content-[']'] {item.isActive
+              ? 'text-gray-900'
+              : 'text-gray-400 hover:text-gray-900 before:opacity-0 after:opacity-0'}"
           >
             {item.name}
           </a>
