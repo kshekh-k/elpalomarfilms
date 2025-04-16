@@ -20,20 +20,13 @@
       url: "/about",
       isActive: false,
     },
-    {
-      name: "Goods",
-      url: "/goods",
-      isActive: false,
-    },
   ];
 
-  menu.forEach(item => {
-    if (window.location.pathname === item.url) {
-      item.isActive = true;
-    } else {
-      item.isActive = false;
-    }
-  });
+  if (typeof window !== "undefined") {
+    menu.forEach(item => {
+      item.isActive = window.location.pathname === item.url;
+    });
+  }
 </script>
 
 <header class="grid grid-cols-12 gap-8 px-3 2xlpx-24">

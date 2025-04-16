@@ -96,7 +96,7 @@
       {#each videos as item, i (i)}
         <swiper-slide>
           <div
-            class="flex justify-center items-stretch gap-2 active:cursor-grabbing flex-1 w-f 2xl:w-[calc(100vw-20rem)] max-w-full h-140 flex-col 2xl:p-5"
+            class="flex justify-center items-stretch gap-2 active:cursor-grabbing flex-1 w-full 2xl:w-[calc(100vw-20rem)] max-w-full h-140 flex-col 2xl:p-5"
           >
             <div
               class="flex items-center justify-center flex-1 overflow-hidden rounded-lg shadow-lg"

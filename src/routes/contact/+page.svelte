@@ -265,57 +265,61 @@
   let openStates: Record<number, boolean> = {};
 </script>
 
-<main class="py-2">
+<main class="py-2 px-3">
   <div class="min-h-screen">
     <Header />
     <div class="overflow-hidden w-full my-20">
-      <div class="grid grid-cols-12 px-24 gap-y-10">
+      <div class="grid grid-cols-12 2xl:px-24 gap-y-10">
         {#each hqs as item, index}
           <div
-            class="relative col-span-full grid cursor-pointer grid-cols-4 items-center gap-x-6 sm:col-span-10 sm:col-start-2 sm:grid-cols-10 sm:gap-x-8"
+            class="relative col-span-full grid cursor-pointer grid-cols-4 items-center gap-5 sm:col-span-10 sm:col-start-2 sm:grid-cols-10 sm:gap-x-8"
           >
-            <h3
-              class="col-span-full select-none text-xl sm:col-span-3 sm:text-right uppercase"
+            <div
+              class="col-span-full sm:col-span-3 sm:justify-end flex items-center gap-5"
             >
-              {item.location}
-            </h3>
-            <button
-              on:click={() => (openStates[index] = !openStates[index])}
-              aria-hidden="true"
-              class="max-sm:absolute max-sm:-left-30 max-sm:top-5 sm:col-span-7"
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="none"
-                class="w-5 ease-in-out duration-300 {openStates[index]
-                  ? 'rotate-0'
-                  : '-rotate-45'}"
-                ><path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-width="1.5"
-                  d="m1 1 18 18m0-18L1 19"
-                ></path></svg
-              ></button
-            >
+              <h3
+                class="col-span-full select-none text-xl sm:text-right uppercase"
+              >
+                {item.location}
+              </h3>
+              <button
+                on:click={() => (openStates[index] = !openStates[index])}
+                aria-hidden="true"
+                class=""
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  class="w-5 ease-in-out duration-300 {openStates[index]
+                    ? 'rotate-0'
+                    : '-rotate-45'}"
+                  ><path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-width="1.5"
+                    d="m1 1 18 18m0-18L1 19"
+                  ></path></svg
+                ></button
+              >
+            </div>
             {#if openStates[index]}
-              <div class="col-span-full overflow-hidden">
+              <div class="flex flex-col gap-5 col-span-full">
                 <div
-                  class="grid grid-cols-4 gap-4 pt-20 max-sm:pb-16 sm:grid-cols-10 sm:pt-4"
+                  class="overflow-hidden relative grid cursor-pointer grid-cols-4 items-center gap-5 sm:col-span-10 sm:col-start-2 sm:grid-cols-10 sm:gap-x-8"
                 >
                   {#each item.officers as officer}
                     <div
-                      class="col-span-full col-start-1 grid grid-cols-4 gap-x-15 gap-y-5 sm:col-span-5 sm:col-start-1 sm:grid-cols-5 sm:gap-8"
+                      class="col-span-full col-start-1 grid grid-cols-4 gap-x-15 gap-y-2 sm:gap-y-5 sm:col-span-7 sm:col-start-1 sm:grid-cols-10 sm:gap-8"
                     >
                       <div
-                        class="col-span-full uppercase sm:col-span-3 sm:whitespace-pre sm:text-right"
+                        class="col-span-full uppercase sm:col-span-4 sm:whitespace-pre sm:text-right"
                       >
                         {officer.post}
                       </div>
 
                       {#if officer.localpost}
                         <div
-                          class="flex flx-col gap-5 col-span-3 max-sm:col-start-2 sm:col-span-2"
+                          class="flex flx-col gap-5 col-span-full sm:col-span-6"
                         >
                           {#each officer.localpost as localpost}
                             <div class="flex flex-col gap-5">
@@ -331,18 +335,16 @@
                           {/each}
                         </div>
                       {:else}
-                        <div
-                          class="col-span-3 max-sm:col-start-2 sm:col-span-2"
-                        >
-                          {officer.name}
-                          {officer.email}
+                        <div class="col-span-full sm:col-span-6">
+                          <p>{officer.name}</p>
+                          <p>{officer.email}</p>
                         </div>
                       {/if}
                     </div>
                   {/each}
                   {#if item.address}
                     <div
-                      class="col-span-full row-start-1 mb-20 sm:col-span-3 sm:col-start-8 sm:row-span-3 sm:row-start-1 max-w-60"
+                      class="col-span-full row-start-1 mb-2 sm:mb-8 sm:col-span-3 sm:col-start-8 sm:row-span-3 sm:row-start-1 max-w-60"
                     >
                       {#each item.address as address}
                         <p>{address.locality}</p>

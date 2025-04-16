@@ -142,11 +142,11 @@
   ];
 </script>
 
-<main class="py-2">
+<main class="py-2 px-3">
   <div class="min-h-screen">
     <Header />
     <div class="overflow-hidden w-full my-20">
-      <div class="grid grid-cols-12 px-24 gap-y-32">
+      <div class="grid grid-cols-12 2xl:px-24 gap-y-32">
         <div
           class="col-span-4 text-lg uppercase sm:col-span-8 sm:col-start-5 space-y-5"
         >

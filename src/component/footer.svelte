@@ -19,7 +19,7 @@
   ];
 </script>
 
-<footer class="flex flex-col md:grid grid-cols-12 gap-8 px-3 2xl:px-24 pt-10">
+<footer class="flex flex-col md:grid grid-cols-12 gap-8 2xl:px-24 pt-10">
   <div class="max-w-40">
     <img src="/images/Logo-El-Palomar-FIilms.svg" alt="El Palomar FIilms" />
   </div>
