@@ -1,10 +1,6 @@
 <script lang="ts">
-  // import { Splide, SplideSlide } from "@splidejs/svelte-splide";
-  import { onMount } from "svelte";
   import { register } from "swiper/element/bundle";
-  import "swiper/element/bundle";
-  import "swiper/css";
-  // import "@splidejs/svelte-splide/css";
+  register();
 
   const videos = [
     {
@@ -54,24 +50,54 @@
       descrip: "Lope Serrano",
     },
   ];
-
-  register();
-
-  const spaceBetween = 10;
-  const onProgress = (e: { detail: [any, any] }) => {
-    const [swiper, progress] = e.detail;
-    console.log(progress);
-  };
-  const onSlideChange = (e: { detail: [any, any] }) => {
-    console.log("slide changed");
-  };
-  let mounted = false;
-  onMount(() => {
-    mounted = true;
-  });
 </script>
 
-<div aria-controls="scroller" aria-hidden="true" class="block">
+<swiper-container
+  space-between={60}
+  free-mode={true}
+  momentum={true}
+  allow-touchmove={false}
+  autoplay-delay={0}
+  loop={true}
+  speed={15000}
+  slides-per-view="auto"
+>
+  {#each videos as item, i (i)}
+    <swiper-slide class="w-auto">
+      <div style="border-radius: 25px; height: 75vh;" class="overflow-hidden">
+        <video
+          class="w-full h-full object-cover"
+          autoplay
+          loop
+          muted
+          playsinline
+        >
+          <source src={item.videowebm} type="video/mp4" />
+        </video>
+      </div>
+      <div
+        class="flex flex-col gap-1 p-2 uppercase text-center text-gray-900 text-xl"
+      >
+        <h3 class="">{item.title}</h3>
+        <p class="">{item.descrip}</p>
+      </div>
+    </swiper-slide>
+  {/each}
+</swiper-container>
+
+<!-- <div
+  class="flex justify-center items-stretch gap-2 active:cursor-grabbing flex-1 flex-col 2xl:p-5 bg-red-600"
+>
+  <div
+    class="flex items-center justify-center flex-1 overflow-hidden rounded-lg shadow-lg bg-blue-600"
+  ></div>
+  <div class="flex flex-col gap-1 p-2 uppercase text-center text-gray-900">
+    <h3 class="font-semibold">Hello World</h3>
+    <p class="font-semibold">lorem ipsum doler</p>
+  </div>
+</div> -->
+
+<!-- <div aria-controls="scroller" aria-hidden="true" class="block">
   {#if mounted}
     <swiper-container
       slides-per-view={1}
@@ -122,4 +148,4 @@
       {/each}
     </swiper-container>
   {/if}
-</div>
+</div> -->

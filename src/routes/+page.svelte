@@ -7,7 +7,7 @@
 <main class="py-2 px-3">
   <div class="min-h-screen">
     <Header />
-    <div class="overflow-hidden w-full">
+    <div class="overflow-hidden w-full pt-10">
       <Slider />
     </div>
     <Footer />
