@@ -1,53 +1,23 @@
 <script lang="ts">
   import { register } from "swiper/element/bundle";
+  import "vidstack/bundle";
   register();
 
   const videos = [
     {
-      videowebm: "/videos/197485-905015019_small.webm",
+      videoId: "19231868",
       title: "Squid — Cro-Magnon Man",
       descrip: "Rory Alexander Stewart",
     },
     {
-      videowebm: "/videos/217490_medium.webm",
+      videoId: "76979871",
       title: "Rosalía — Motomami",
       descrip: "STILLZ",
     },
     {
-      videowebm: "/videos/8771136-uhd_2160_4096_25fps.webm",
+      videoId: "1076692645",
       title: "Axe — Long Lasting",
       descrip: "Andreas Nilsson",
-    },
-
-    {
-      videowebm: "/videos/13050886_1080_1920_30fps.webm",
-      title: "Expedia — Nothing (DC)",
-      descrip: "Lope Serrano",
-    },
-    {
-      videowebm: "/videos/13343149_1080_1920_30fps.webm",
-      title: "Travis Scott — Sirens",
-      descrip: " ",
-    },
-    {
-      videowebm: "/videos/13383668_1080_1920_30fps.webm",
-      title: "Telefónica — Neuron (DC)",
-      descrip: "Nicolás Méndez",
-    },
-    {
-      videowebm: "/videos/13392869_1080_1920_60fps.webm",
-      title: "Saint Jhn — Body On Me",
-      descrip: "Alex Gargot",
-    },
-    {
-      videowebm: "/videos/13425380_2160_3840_25fps.webm",
-      title: "The Chemical Brothers ft Beck — Skipping Like A Stone",
-      descrip: "Pensacola",
-    },
-    {
-      videowebm: "/videos/16636239-hd_1920_1080_50fps.webm",
-      title: "La Causa del Accidente que Provocó el Incendio",
-      descrip: "Lope Serrano",
     },
   ];
 </script>
@@ -56,30 +26,28 @@
   space-between={60}
   free-mode={true}
   momentum={true}
-  allow-touchmove={false}
-  autoplay-delay={0}
   loop={true}
-  speed={15000}
   slides-per-view="auto"
 >
   {#each videos as item, i (i)}
     <swiper-slide class="w-auto">
-      <div style="border-radius: 25px; height: 75vh;" class="overflow-hidden">
-        <video
-          class="w-full h-full object-cover"
+      <div class="overflow-hidden" style="border-radius: 25px; height: 75vh;">
+        <media-player
           autoplay
           loop
           muted
-          playsinline
+          title="Sprite Fight"
+          src={`vimeo/${item.videoId}`}
+          style="height: 100%"
         >
-          <source src={item.videowebm} type="video/mp4" />
-        </video>
+          <media-provider></media-provider>
+        </media-player>
       </div>
       <div
         class="flex flex-col gap-1 p-2 uppercase text-center text-gray-900 text-xl"
       >
-        <h3 class="">{item.title}</h3>
-        <p class="">{item.descrip}</p>
+        <h3>{item.title}</h3>
+        <p>{item.descrip}</p>
       </div>
     </swiper-slide>
   {/each}
