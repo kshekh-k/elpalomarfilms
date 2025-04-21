@@ -2,6 +2,9 @@
 
 Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
 
+## Check site live on 
+https://elpalomarfilms.vercel.app
+
 ## Creating a project
 
 If you're seeing this, you've probably already done this step. Congrats!
