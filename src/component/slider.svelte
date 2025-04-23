@@ -4,6 +4,7 @@
   import { collection, getDocs, getFirestore, query } from "firebase/firestore";
   import { onMount } from "svelte";
   import { firebaseApp } from "$lib/firebase";
+
   register();
 
   type Video = { vimeoId: string; title: string; description: string };
@@ -14,10 +15,9 @@
     loading = true;
     const db = getFirestore(firebaseApp);
     const q = query(collection(db, "films"));
-
     const querySnapshot = await getDocs(q);
     // @ts-ignore
-    videos = querySnapshot.docs.map((doc) => ({
+    videos = querySnapshot.docs.map(doc => ({
       id: doc.id,
       ...doc.data(),
     }));
@@ -34,15 +34,14 @@
       space-between={60}
       free-mode={true}
       momentum={true}
-      slides-per-view="auto"
+      slidesPerView={"auto"}
       autoplay-delay={0}
       speed={15000}
     >
       {#each videos as item, i (i)}
         <swiper-slide class="w-auto">
           <div
-            class="overflow-hidden"
-            style="border-radius: 25px; height: 75svh;"
+            class="overflow-hidden rounded-2xl h-[75svh] flex-auto bg-black/5"
           >
             <media-player
               autoplay

@@ -1,0 +1,104 @@
+@font-face {
+    font-family: 'Times LT Std';
+    src: url('TimesLTStd-ExtraBold.eot');
+    src: local('Times LT Std Extra Bold'), local('TimesLTStd-ExtraBold'),
+        url('TimesLTStd-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('TimesLTStd-ExtraBold.woff2') format('woff2'),
+        url('TimesLTStd-ExtraBold.woff') format('woff'),
+        url('TimesLTStd-ExtraBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Times LT Std';
+    src: url('TimesLTStd-SemiboldItalic.eot');
+    src: local('Times LT Std Semibold Italic'), local('TimesLTStd-SemiboldItalic'),
+        url('TimesLTStd-SemiboldItalic.eot?#iefix') format('embedded-opentype'),
+        url('TimesLTStd-SemiboldItalic.woff2') format('woff2'),
+        url('TimesLTStd-SemiboldItalic.woff') format('woff'),
+        url('TimesLTStd-SemiboldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Times LT Std';
+    src: url('TimesLTStd-Roman.eot');
+    src: local('Times LT Std Roman'), local('TimesLTStd-Roman'),
+        url('TimesLTStd-Roman.eot?#iefix') format('embedded-opentype'),
+        url('TimesLTStd-Roman.woff2') format('woff2'),
+        url('TimesLTStd-Roman.woff') format('woff'),
+        url('TimesLTStd-Roman.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Times LT Std';
+    src: url('TimesLTStd-Bold.eot');
+    src: local('Times LT Std Bold'), local('TimesLTStd-Bold'),
+        url('TimesLTStd-Bold.eot?#iefix') format('embedded-opentype'),
+        url('TimesLTStd-Bold.woff2') format('woff2'),
+        url('TimesLTStd-Bold.woff') format('woff'),
+        url('TimesLTStd-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Times LT Std';
+    src: url('TimesLTStd-Italic.eot');
+    src: local('Times LT Std Italic'), local('TimesLTStd-Italic'),
+        url('TimesLTStd-Italic.eot?#iefix') format('embedded-opentype'),
+        url('TimesLTStd-Italic.woff2') format('woff2'),
+        url('TimesLTStd-Italic.woff') format('woff'),
+        url('TimesLTStd-Italic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Times LT Std';
+    src: url('TimesLTStd-Phonetic.eot');
+    src: local('Times LT Std Phonetic'), local('TimesLTStd-Phonetic'),
+        url('TimesLTStd-Phonetic.eot?#iefix') format('embedded-opentype'),
+        url('TimesLTStd-Phonetic.woff2') format('woff2'),
+        url('TimesLTStd-Phonetic.woff') format('woff'),
+        url('TimesLTStd-Phonetic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Times LT Std';
+    src: url('TimesLTStd-BoldItalic.eot');
+    src: local('Times LT Std Bold Italic'), local('TimesLTStd-BoldItalic'),
+        url('TimesLTStd-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('TimesLTStd-BoldItalic.woff2') format('woff2'),
+        url('TimesLTStd-BoldItalic.woff') format('woff'),
+        url('TimesLTStd-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Times LT Std';
+    src: url('TimesLTStd-Semibold.eot');
+    src: local('Times LT Std Semibold'), local('TimesLTStd-Semibold'),
+        url('TimesLTStd-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('TimesLTStd-Semibold.woff2') format('woff2'),
+        url('TimesLTStd-Semibold.woff') format('woff'),
+        url('TimesLTStd-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+

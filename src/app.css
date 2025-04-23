@@ -2,6 +2,11 @@
 @import "tailwindcss";
 
 @theme {
+  --font-serif:"Times LT Std", "serif"
+    --font-times:"Typography Times Regular", 'serif';
+    --font-times-bold-italic:"Typography Times Bold Italic", 'serif';
+    --font-times-bold:"Typography Times Bold", 'serif';
+    --font-times-italic:"Typography Times Italic", 'serif';
     --font-sans: "GT Zirkon", "sans-serif"; 
     --font-sans-book: "GT Zirkon Book", "sans-serif"; 
     --font-sans-ultralight: "GT Zirkon Ultra", "sans-serif"; 
