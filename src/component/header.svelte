@@ -2,17 +2,17 @@
   const menu = [
     {
       name: "Home",
-      url: "/",
+      url: "home",
       isActive: true,
     },
     {
       name: "About Us",
-      url: "/about",
+      url: "about",
       isActive: false,
     },
     {
       name: "Contact",
-      url: "/contact",
+      url: "contact",
       isActive: false,
     },
   ];
@@ -22,9 +22,12 @@
       item.isActive = window.location.pathname === item.url;
     });
   }
+  export let activeSection: string = "home";
 </script>
 
-<header class="flex md:grid md:grid-cols-12 gap-8 px-3 2xl:px-24">
+<header
+  class="flex md:grid md:grid-cols-12 gap-8 p-3 2xl:px-24 top-0 fixed bg-white z-50 inset-x-0"
+>
   <div class="col-start-4 flex justify-center">
     <a href="/">
       <img
@@ -39,7 +42,7 @@
       <div class="col-span-4 col-start-5 uppercase flex flex-col gap-1">
         {#each menu as item}
           <a
-            href={item.url}
+            href={`#${item.url}`}
             class="pointer-events-auto relative flex gap-1 w-fit items-center font-medium ease-in-out duration-300 text-gray-900 hover:text-gray-400"
           >
             <span class="italic">{item.name}</span>
